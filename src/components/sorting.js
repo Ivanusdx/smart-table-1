@@ -1,5 +1,10 @@
 import { sortCollection, sortMap } from "../lib/sort.js";
 
+
+const applyFiltering = initFiltering(sampleTable.filter.elements, {    
+    searchBySeller: indexes.sellers                                    
+});
+
 export function initSorting(columns) {
   return (data, state, action) => {
     let field = null;
